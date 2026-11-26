@@ -35,17 +35,17 @@ python -m http.server 8000   # then open http://localhost:8000
 - [x] Add `main.js` hook, `.nojekyll` and this README
 
 ### Phase 1: Content and positioning (from resume)
-- [ ] Change the hero from "UI/UX designer" to product, data and AI, with design as one strength
-- [ ] "Now" strip: the latest work (LeadGen engine, Aug to Sep 2026; Medetronix internship, May to Aug 2026)
-- [ ] Experience timeline: Medetronix Labs (AI/ML), Ashok Leyland (ML research), Stash AI (PM), with impact numbers
-- [ ] Projects grid with filters (AI/ML · Data · Product/Strategy · Design):
+- [x] Hero repositioned: Product · Growth · Analytics, with the tech stack highlighted
+- [x] "Now" strip: the latest work (LeadGen engine, Aug to Sep 2026; Medetronix internship, May to Aug 2026)
+- [x] Experience timeline: Medetronix Labs (AI/ML), Ashok Leyland (ML research), Stash AI (PM), with impact numbers
+- [x] Projects grid with filters (AI/ML · Data · Product/Strategy · Design):
       LeadGen Outbound Engine, CauseIQ (Accenture), Customer Churn, E-Commerce SQL, Reinforce GT,
       Weed/Crop CNN, Sharechat expansion, Cura Devices (Solve the Biz)
-- [ ] Keep the design work section: Jeenius, Antaragni, Product Club, Vegan Books, CA Portal, Events, Pride, Battle Underground
-- [ ] Leadership: E-Cell Manager, Product Club Secretary, TEDxIITK
-- [ ] Achievements: Accenture top 4%, GDSC × Return Journey finalist, Solve the Biz gold, Ideation Insomnia gold
-- [ ] Skills grouped as Product / Data / ML & GenAI / Programming
-- [ ] Real contact links: email, LinkedIn, GitHub, Figma, plus a resume download
+- [x] Keep the design work section: Jeenius, Antaragni, Product Club, Vegan Books, CA Portal, Events, Pride, Battle Underground
+- [x] Leadership: E-Cell Manager, Product Club Secretary, TEDxIITK
+- [x] Achievements: Accenture top 4%, GDSC × Return Journey finalist, Solve the Biz gold, Ideation Insomnia gold
+- [x] Skills grouped as Product / Data / ML & GenAI / Programming
+- [x] Email, GitHub and resume download live (LinkedIn and Figma still to come)
 
 ### Phase 2: Make every link work
 - [ ] Each card links to a GitHub repo, a Figma or live link, or a `projects/<slug>.html` case study. No `#` placeholders.

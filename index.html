@@ -3,49 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aakriti — Design Portfolio</title>
-  <meta name="description" content="Aakriti's UI/UX and product design portfolio." />
+  <title>Aakriti Prajapati — Product · Growth · Analytics</title>
+  <meta name="description" content="Aakriti Prajapati, final-year at IIT Kanpur. Product, growth and analytics, with hands-on ML and GenAI engineering." />
+  <meta property="og:title" content="Aakriti Prajapati — Product · Growth · Analytics" />
+  <meta property="og:description" content="Turning user research and data into product decisions, and building the analytics and AI behind them." />
+  <meta property="og:image" content="https://aakritip23.github.io/assets/img/profile.png" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="nav wrap">
-    <a class="brand" href="#top">Aakriti<span>.</span></a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="nav-bar">
+    <div class="nav wrap">
+      <a class="brand" href="#top">Aakriti<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="site-nav">
+        <a href="#now">Now</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#design">Design</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+        <a class="pill dark small" href="assets/resume/Aakriti_Prajapati_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow">UI / UX · PRODUCT DESIGN</p>
+        <p class="eyebrow">PRODUCT · GROWTH · ANALYTICS</p>
         <h1>Hi, I'm <em>Aakriti.</em></h1>
-        <p class="hero-text">I design intuitive digital experiences that are simple, engaging and centred around people.</p>
+        <p class="hero-text">I turn user research and data into product decisions, and I can build the analytics and AI behind them.</p>
+        <p class="hero-sub">Final-year undergrad at <strong>IIT Kanpur</strong>. Previously a Product Management intern at <strong>Stash AI</strong> and an ML intern at <strong>Medetronix Labs</strong> and <strong>Ashok Leyland</strong>.</p>
+        <ul class="chips" aria-label="Core toolkit">
+          <li>SQL</li><li>Python</li><li>Mixpanel</li><li>A/B testing</li><li>Power BI · Tableau</li><li>LangChain</li><li>XGBoost</li><li>Figma</li>
+        </ul>
         <div class="links">
-          <a href="#work" class="pill dark">View my work ↓</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="text-link">LinkedIn ↗</a>
-          <a href="https://www.figma.com/" target="_blank" rel="noreferrer" class="text-link">Figma ↗</a>
+          <a href="#projects" class="pill dark">View my work ↓</a>
+          <a href="assets/resume/Aakriti_Prajapati_Resume.pdf" target="_blank" rel="noopener" class="pill outline">Resume</a>
+          <a href="https://github.com/aakritip23" target="_blank" rel="noopener" class="text-link">GitHub ↗</a>
         </div>
       </div>
       <div class="hero-photo-wrap">
         <div class="photo-blob"></div>
-        <img src="assets/img/profile.png" alt="Aakriti" class="hero-photo" />
+        <img src="assets/img/profile.png" alt="Portrait of Aakriti Prajapati" class="hero-photo" width="430" height="576" />
       </div>
     </section>
 
-    <section id="work" class="work wrap">
+    <!-- STATS -->
+    <section class="stats wrap reveal" aria-label="Highlights">
+      <div><strong>10,000+</strong><span>users reached by the EdTech MVP I helped ship</span></div>
+      <div><strong>Top 4%</strong><span>of 5,400+ teams, Accenture Innovation Challenge</span></div>
+      <div><strong>77%</strong><span>accuracy from my RAG parameter-prediction system</span></div>
+      <div><strong>300+</strong><span>member team led at E-Cell, IIT Kanpur</span></div>
+    </section>
+
+    <!-- NOW -->
+    <section id="now" class="now wrap reveal">
       <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2>A few things I've designed.</h2>
+        <p class="eyebrow">WHAT I'VE BEEN DOING LATELY</p>
+        <h2>Now.</h2>
+      </div>
+      <ol class="now-list">
+        <li>
+          <span class="when">Aug – Sep 2026</span>
+          <div>
+            <h3>Building LeadGen, an agentic outbound engine</h3>
+            <p>A 6-agent LangGraph pipeline that sources, scores, personalises and sequences sales outreach. It reached 80%+ reply-classification accuracy across 150+ leads.</p>
+            <a class="text-link" href="https://github.com/aakritip23/Agentic-Outbound-Sales-Research-Sequencing-Engine" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </li>
+        <li>
+          <span class="when">May – Aug 2026</span>
+          <div>
+            <h3>AI/ML Engineer Intern, Medetronix Labs</h3>
+            <p>Shipped an LLM-powered RAG system that recommends parameters for 7 electrochemical techniques. Received a Letter of Recommendation.</p>
+            <a class="text-link" href="https://github.com/aakritip23/MTX-Labs" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </li>
+        <li>
+          <span class="when">2026</span>
+          <div>
+            <h3>CausIQ, Accenture Innovation Challenge</h3>
+            <p>An AI root-cause-analysis engine for KPI drops. It reached Round 2, placing in the top 4% of 5,400+ teams.</p>
+            <a class="text-link" href="https://github.com/aakritip23/CausIQ" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience wrap reveal">
+      <div class="section-heading">
+        <p class="eyebrow">EXPERIENCE</p>
+        <h2>Where I've worked.</h2>
+      </div>
+
+      <article class="job">
+        <header>
+          <div><h3>Product Management Intern</h3><p class="org">Stash AI · D2C AI-driven EdTech</p></div>
+          <span class="when">May – Aug 2025</span>
+        </header>
+        <ul>
+          <li>Took a 0→1 AI EdTech MVP to launch for <strong>10,000+ users</strong> in tier-2/3 India, onboarding <strong>200+ MAU</strong> at launch.</li>
+          <li>Ran research with <strong>1,000+ surveys, 20+ interviews and 5+ competitor audits</strong>. Prioritised features with RICE and SWOT, and defined MVP scope, GTM and three pricing tiers.</li>
+          <li>Wrote the PRD around AARRR, wireframed <strong>30+ screens</strong> and ran agile sprints with the design and dev teams.</li>
+          <li>A/B tested UI/UX across <strong>200+ sessions</strong> with Mixpanel journey analytics, cutting bounce rate by <strong>20%</strong>.</li>
+        </ul>
+        <ul class="chips small"><li>PRD</li><li>RICE</li><li>AARRR</li><li>A/B testing</li><li>Mixpanel</li><li>Figma</li><li>GTM</li></ul>
+        <a class="text-link" href="https://github.com/aakritip23/JEENIUS-PM-Intern" target="_blank" rel="noopener">Product work (Jeenius) ↗</a>
+      </article>
+
+      <article class="job">
+        <header>
+          <div><h3>AI/ML Engineer Intern</h3><p class="org">Medetronix Labs Pvt. Ltd. · Letter of Recommendation</p></div>
+          <span class="when">May – Aug 2026</span>
+        </header>
+        <ul>
+          <li>Built an end-to-end RAG and ETL pipeline (LangChain, Groq, FAISS, OpenAlex API) that recommends experiment parameters from research literature.</li>
+          <li>Designed a two-stage retrieval funnel that filters high-relevance context before it reaches Groq LLaMA, which improved accuracy and cut latency.</li>
+          <li>Delivered a FastAPI and Svelte 5 app with <strong>77% accuracy</strong> against ground truth at about <strong>18 s per query</strong>.</li>
+        </ul>
+        <ul class="chips small"><li>LangChain</li><li>FAISS</li><li>HuggingFace</li><li>Groq LLaMA</li><li>FastAPI</li><li>Svelte</li></ul>
+        <a class="text-link" href="https://github.com/aakritip23/MTX-Labs" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <article class="job">
+        <header>
+          <div><h3>ML Research Intern</h3><p class="org">Ashok Leyland</p></div>
+          <span class="when">Dec 2025 – Jan 2026</span>
+        </header>
+        <ul>
+          <li>Built an ML model that predicts average and maximum vibration g-levels for HyperWorks fatigue analysis.</li>
+          <li>Automated the conversion of time-series vibration data into FFT spectra, cutting processing time by <strong>99%</strong>.</li>
+          <li>Reduced inputs from <strong>31 to 5</strong> (SMOTE, LDA-SSS) and trained an XGBoost model to <strong>R² ≈ 0.85</strong>.</li>
+        </ul>
+        <ul class="chips small"><li>Python</li><li>FFT</li><li>XGBoost</li><li>Feature engineering</li></ul>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects wrap reveal">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED PROJECTS</p>
+        <h2>Strategy, data and the systems behind them.</h2>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="product" aria-pressed="false">Product &amp; Strategy</button>
+        <button class="filter" data-filter="data" aria-pressed="false">Data &amp; Analytics</button>
+        <button class="filter" data-filter="ai" aria-pressed="false">AI &amp; ML</button>
+      </div>
+
+      <div class="project-list">
+        <article class="project" data-tags="data ai">
+          <span class="tag">ACCENTURE INNOVATION CHALLENGE · 2026</span>
+          <h3>CausIQ: AI root-cause analysis</h3>
+          <p>Explains why a KPI moved. It decomposes KPIs, applies Holt-Winters forecasting and difference-in-differences, then checks every finding with placebo, negative-control and leave-one-out tests.</p>
+          <p class="metric"><strong>0.03 pp</strong> error vs ground truth · <strong>top 4%</strong> of 5,400+ teams</p>
+          <ul class="chips small"><li>Python</li><li>DuckDB</li><li>Streamlit</li><li>SQL RBAC</li></ul>
+          <a class="text-link" href="https://github.com/aakritip23/CausIQ" target="_blank" rel="noopener">GitHub ↗</a>
+        </article>
+
+        <article class="project" data-tags="ai product">
+          <span class="tag">SELF PROJECT · 2026</span>
+          <h3>LeadGen Outbound Engine</h3>
+          <p>Automates growth outbound end to end: scraping and enrichment, ICP scoring with Llama-3, personalised sequencing, and reply handling, all tracked in a stateful 7-stage SQLite funnel.</p>
+          <p class="metric"><strong>80%+</strong> reply-classification accuracy · <strong>70%</strong> contact completeness</p>
+          <ul class="chips small"><li>LangGraph</li><li>Groq Llama-3</li><li>Selenium</li><li>SQLite</li></ul>
+          <a class="text-link" href="https://github.com/aakritip23/Agentic-Outbound-Sales-Research-Sequencing-Engine" target="_blank" rel="noopener">GitHub ↗</a>
+        </article>
+
+        <article class="project" data-tags="data ai">
+          <span class="tag">IITK CONSULTING GROUP · 2024</span>
+          <h3>Customer Churn Prediction</h3>
+          <p>Modelled churn on a 100k+ customer banking dataset to put a number on expected financial loss and show where retention spend matters most.</p>
+          <p class="metric">ROC-AUC <strong>0.91</strong> · top 10% of customers = <strong>53%</strong> of expected loss</p>
+          <ul class="chips small"><li>EDA</li><li>XGBoost</li><li>Random Forest</li><li>Pandas</li></ul>
+          <a class="text-link" href="https://github.com/aakritip23/Customer_Churn_Analysis" target="_blank" rel="noopener">GitHub ↗</a>
+        </article>
+
+        <article class="project" data-tags="data">
+          <span class="tag">DMS201 · PROF. AVIJIT KHANRA · 2025</span>
+          <h3>E-Commerce Analysis with Advanced SQL</h3>
+          <p>Analysed 50k+ orders to find peak months, top categories and customer segments, then built a dashboard and a plan covering loyalty, shipping and payment mix.</p>
+          <p class="metric"><strong>$7.8M</strong> sales · <strong>$3.6M</strong> profit analysed · <strong>20–30%</strong> projected savings</p>
+          <ul class="chips small"><li>SQL</li><li>Python</li><li>Tableau</li></ul>
+        </article>
+
+        <article class="project" data-tags="product">
+          <span class="tag">SELF PROJECT · 2025</span>
+          <h3>ShareChat global expansion strategy</h3>
+          <p>Evaluated 3 international markets on macro factors, PMF and monetisation using the GE-McKinsey matrix, and proposed a short-drama entry with an ads plus subscription model.</p>
+          <p class="metric">Projected <strong>$2.1M ARR</strong> at 2% market capture</p>
+          <ul class="chips small"><li>Market sizing</li><li>GE-McKinsey</li><li>Competitor audit</li></ul>
+        </article>
+
+        <article class="project" data-tags="product">
+          <span class="tag">SOLVE THE BIZ 2.0 · ENTREVERSE · GOLD</span>
+          <h3>Cura Devices go-to-market</h3>
+          <p>A JTBD, RICE and GTM strategy for a diagnostics device: a razor-and-blade model with ₹150 strips against ₹300–600 lab tests, targeting people with diabetes as the beachhead market.</p>
+          <p class="metric"><strong>Gold</strong> among 100+ teams</p>
+          <ul class="chips small"><li>JTBD</li><li>RICE</li><li>Pricing</li><li>GTM</li></ul>
+        </article>
+
+        <article class="project" data-tags="ai data">
+          <span class="tag">STAMATICS, IIT KANPUR · 2025</span>
+          <h3>Reinforce GT: game-theoretic option pricing</h3>
+          <p>Priced options by modelling strategic agents. Built 100-step binomial trees and solved matrix games for Nash equilibria with linear programming, tested on 500+ AAPL contracts.</p>
+          <p class="metric">Beat the baseline by <strong>6.4%</strong> in volatile markets</p>
+          <ul class="chips small"><li>Game theory</li><li>MARL</li><li>Python</li></ul>
+          <a class="text-link" href="https://github.com/aakritip23/Reinforce-GT" target="_blank" rel="noopener">GitHub ↗</a>
+        </article>
+
+        <article class="project" data-tags="ai">
+          <span class="tag">EE708 · PROF. RAJESH M. HEGDE · 2024</span>
+          <h3>Weed / crop classification</h3>
+          <p>A CNN pipeline in TensorFlow/Keras that classifies crops and weeds from 3k+ field images, evaluated with confusion matrices, PR and ROC curves.</p>
+          <p class="metric"><strong>83%</strong> accuracy · <strong>90%</strong> precision · <strong>85%</strong> recall</p>
+          <ul class="chips small"><li>TensorFlow</li><li>CNN</li><li>Computer vision</li></ul>
+          <a class="text-link" href="https://github.com/aakritip23/Weed-and-Crop-Classification-using-Deep-Learning" target="_blank" rel="noopener">GitHub ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- DESIGN WORK -->
+    <section id="design" class="work wrap reveal">
+      <div class="section-heading">
+        <p class="eyebrow">PRODUCT DESIGN</p>
+        <h2>Interfaces I've designed.</h2>
       </div>
 
       <div class="project-grid">
-        <a class="project-card featured" href="#project-jeenius">
+        <a class="project-card" href="https://github.com/aakritip23/JEENIUS-PM-Intern" target="_blank" rel="noopener">
           <div class="project-preview jeenius">
             <div class="preview-window">
               <span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span>
@@ -53,65 +248,120 @@
               <div class="mock-lines"><i></i><i></i><i></i></div>
               <div class="mock-card"></div>
             </div>
+            <div class="hover-label">Open ↗</div>
           </div>
-          <div class="project-info"><span>01 · APP / PRODUCT</span><h3>Jeenius</h3><p>Designing an AI-powered learning experience for JEE preparation.</p></div>
+          <div class="project-info"><span>01 · APP / PRODUCT</span><h3>Jeenius</h3><p>An AI-powered learning experience for JEE preparation.</p></div>
         </a>
 
-        <a class="project-card" href="#project-antaragni">
-          <div class="project-preview antaragni"><div class="logo-mark">A</div><div class="hover-label">Hover preview ↗</div></div>
-          <div class="project-info"><span>02 · WEB / EVENT</span><h3>Antaragni</h3><p>Digital experiences for IIT Kanpur's cultural festival.</p></div>
+        <a class="project-card" href="https://github.com/aakritip23/Antaragni" target="_blank" rel="noopener">
+          <div class="project-preview antaragni"><div class="logo-mark">A</div><div class="hover-label">Open ↗</div></div>
+          <div class="project-info"><span>02 · WEB / EVENT</span><h3>Antaragni</h3><p>Web experiences for IIT Kanpur's cultural festival, including the main site and 10+ pages.</p></div>
         </a>
 
-        <a class="project-card" href="#project-productclub">
-          <div class="project-preview productclub"><div class="logo-mark">P</div><div class="hover-label">Hover preview ↗</div></div>
+        <a class="project-card" href="https://github.com/aakritip23/UI-UX-Nexus" target="_blank" rel="noopener">
+          <div class="project-preview productclub"><div class="logo-mark">P</div><div class="hover-label">Open ↗</div></div>
           <div class="project-info"><span>03 · WEB / UI</span><h3>Product Club</h3><p>A clean web experience for the product community at IIT Kanpur.</p></div>
         </a>
 
-        <a class="project-card" href="#project-vegan">
-          <div class="project-preview vegan"><div class="logo-mark">V</div><div class="hover-label">Hover preview ↗</div></div>
+        <div class="project-card is-static">
+          <div class="project-preview vegan"><div class="logo-mark">V</div></div>
           <div class="project-info"><span>04 · WEB / UI</span><h3>Vegan Books</h3><p>A focused webpage interface built around a simple reading experience.</p></div>
-        </a>
+        </div>
       </div>
 
       <div class="more-work">
-        <p class="eyebrow">MORE WORK</p>
-        <div class="tag-list">
-          <a href="#project-ca">Antaragni CA Portal ↗</a>
-          <a href="#project-events">Antaragni Events ↗</a>
-          <a href="#project-pride">Pride Webpage ↗</a>
-          <a href="#project-battle">Battle Underground ↗</a>
+        <p class="eyebrow">MORE DESIGN WORK</p>
+        <ul class="tag-list">
+          <li>Antaragni CA Portal</li>
+          <li>Antaragni Events</li>
+          <li>Pride Webpage</li>
+          <li>Battle Underground</li>
+          <li>Return Journey community tab (GDSC finalist)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="leadership wrap reveal">
+      <div class="section-heading">
+        <p class="eyebrow">LEADERSHIP</p>
+        <h2>Building communities at IIT Kanpur.</h2>
+      </div>
+      <div class="lead-grid">
+        <article>
+          <span class="when">Apr 2025 – Mar 2026</span>
+          <h3>Manager, Start-up Development</h3>
+          <p class="org">Entrepreneurship Cell</p>
+          <ul>
+            <li>Led a 3-tier team of <strong>300+</strong> members and a <strong>₹60L+</strong> annual budget.</li>
+            <li>Ran the 14th E-Summit with <strong>8,000+</strong> participants, 40+ VCs and 100+ startups.</li>
+            <li>Led UpStart across 5 cities, including Seoul: <strong>600+</strong> startups and <strong>₹2Cr+</strong> in funding.</li>
+            <li>Grew YEC to <strong>25K+</strong> registrations, 10× year on year.</li>
+          </ul>
+        </article>
+        <article>
+          <span class="when">Jun 2024 – Mar 2025</span>
+          <h3>Secretary, Product Club</h3>
+          <p class="org">Academics &amp; Career Council</p>
+          <ul>
+            <li>Selected as one of 30 from <strong>300+</strong> applicants for the PM lead team.</li>
+            <li>Worked across strategy, analytics, design and tech on 2 live projects (DORD, Antaragni).</li>
+            <li>Designed <strong>5+</strong> UI/UX projects in Figma and Adobe XD.</li>
+          </ul>
+        </article>
+        <article>
+          <span class="when">2 years</span>
+          <h3>TEDxIITKanpur &amp; Hult Prize</h3>
+          <p class="org">Organising team</p>
+          <ul>
+            <li>Organised TEDxIITKanpur on a <strong>₹2L+</strong> budget with 16+ speakers.</li>
+            <li>Hosted Hult Prize OnCampus with 10+ mentors and 20+ teams.</li>
+            <li>Mentored 20+ underprivileged students in Class 12 chemistry at Prayas.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="awards">
+        <p class="eyebrow">ACHIEVEMENTS</p>
+        <ul>
+          <li><strong>Top 4%</strong> of 5,400+ teams, Accenture Innovation Challenge 2026</li>
+          <li><strong>National Finalist</strong> of 1,200+ teams, GDSC × Return Journey Hackathon</li>
+          <li><strong>Gold</strong> of 100+ teams, Solve the Biz 2.0, Entreverse '24</li>
+          <li><strong>Gold</strong> of 60+ teams, Ideation Insomnia, powered by Groww</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT + SKILLS -->
+    <section id="about" class="about wrap reveal">
+      <div><p class="eyebrow">A LITTLE ABOUT ME</p></div>
+      <div class="about-copy">
+        <h2>A product person who can open the notebook.</h2>
+        <p>I'm a final-year Mechanical Engineering undergraduate at IIT Kanpur. I like problems where the answer depends on understanding users <em>and</em> reading the data properly: why a metric moved, which feature to build first, how to price something new.</p>
+        <p>My internships have covered both sides. I shipped a 0→1 EdTech MVP as a PM, and I built ML and RAG systems as an engineer. That lets me work with engineers on the details and still keep the user and the business in view.</p>
+
+        <div class="skills">
+          <div><h4>Product &amp; Growth</h4><p>PRD writing, RICE, MoSCoW, JTBD, AARRR, A/B testing, GTM, pricing, user research</p></div>
+          <div><h4>Data &amp; Analytics</h4><p>SQL, MySQL, DuckDB, Excel, Power BI, Tableau, Mixpanel, GA4, Amplitude</p></div>
+          <div><h4>ML &amp; GenAI</h4><p>Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, LangChain, LangGraph, FAISS, HuggingFace</p></div>
+          <div><h4>Build &amp; Design</h4><p>Python, C++, Java, FastAPI, Streamlit, Git, Figma, Adobe XD, Jira, Notion</p></div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about wrap">
-      <div><p class="eyebrow">A LITTLE ABOUT ME</p></div>
-      <div class="about-copy">
-        <h2>Designing at the intersection of people, products and technology.</h2>
-        <p>I am a student at IIT Kanpur with a strong interest in UI/UX and product design. I've worked on digital experiences as a UI/UX Designer at Stash AI and with the Antaragni web team at IIT Kanpur.</p>
-        <p>This portfolio is a collection of interfaces, websites and product experiences I've explored so far.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="contact wrap">
+    <!-- CONTACT -->
+    <section id="contact" class="contact wrap reveal">
       <p class="eyebrow">LET'S CONNECT</p>
-      <h2>Have a project in mind?</h2>
-      <a class="email" href="mailto:your-email@example.com">your-email@example.com ↗</a>
-      <div class="footer-links"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</a></div>
+      <h2>Hiring for product, growth or analytics?</h2>
+      <a class="email" href="mailto:aakritip23@iitk.ac.in">aakritip23@iitk.ac.in ↗</a>
+      <div class="footer-links">
+        <a href="https://github.com/aakritip23" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/resume/Aakriti_Prajapati_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
     </section>
   </main>
 
-  <!-- Project detail anchors: replace these with real project pages or Figma links later. -->
-  <div id="project-jeenius" class="modal-anchor"></div>
-  <div id="project-antaragni" class="modal-anchor"></div>
-  <div id="project-productclub" class="modal-anchor"></div>
-  <div id="project-vegan" class="modal-anchor"></div>
-  <div id="project-ca" class="modal-anchor"></div>
-  <div id="project-events" class="modal-anchor"></div>
-  <div id="project-pride" class="modal-anchor"></div>
-  <div id="project-battle" class="modal-anchor"></div>
-
-  <footer class="wrap footer"><span>© 2026 Aakriti</span><span>Made with curiosity & care.</span></footer>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> Aakriti Prajapati</span><span>Made with curiosity &amp; care.</span></footer>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
