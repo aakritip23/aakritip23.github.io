@@ -1,23 +1,47 @@
-// Mobile nav, project filters, scroll reveal, footer year.
+// Sidebar contacts toggle, tab navigation (with #hash links), project filter, contact form.
 (function () {
-  document.documentElement.classList.add('js');
-
-  // Mobile nav
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.getElementById('site-nav');
-  if (toggle && nav) {
-    var setOpen = function (open) {
-      nav.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    };
-    toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
-    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  // Sidebar "Show contacts"
+  var sidebar = document.getElementById('sidebar');
+  var moreBtn = document.querySelector('.info-more-btn');
+  if (sidebar && moreBtn) {
+    moreBtn.addEventListener('click', function () {
+      var open = sidebar.classList.toggle('open');
+      moreBtn.setAttribute('aria-expanded', String(open));
+      moreBtn.querySelector('span').textContent = open ? 'Hide contacts' : 'Show contacts';
+    });
   }
 
-  // Project filters
-  var filters = document.querySelectorAll('.filter');
-  var projects = document.querySelectorAll('.project');
+  // Tabs: each nav link shows one page; the URL hash keeps it shareable.
+  var links = document.querySelectorAll('[data-nav]');
+  var pages = document.querySelectorAll('[data-page]');
+  function show(name, scroll) {
+    var found = false;
+    pages.forEach(function (p) {
+      var on = p.dataset.page === name;
+      p.classList.toggle('active', on);
+      if (on) found = true;
+    });
+    if (!found) return show('about', scroll);
+    links.forEach(function (l) {
+      var on = l.dataset.nav === name;
+      l.classList.toggle('active', on);
+      if (on) l.setAttribute('aria-current', 'page'); else l.removeAttribute('aria-current');
+    });
+    if (scroll) window.scrollTo({ top: 0 });
+  }
+  links.forEach(function (l) {
+    l.addEventListener('click', function (e) {
+      e.preventDefault();
+      history.replaceState(null, '', '#' + l.dataset.nav);
+      show(l.dataset.nav, true);
+    });
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
+  show(location.hash.slice(1) || 'about', false);
+
+  // Portfolio filter
+  var filters = document.querySelectorAll('.filter-btn');
+  var items = document.querySelectorAll('.project-item');
   filters.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var f = btn.dataset.filter;
@@ -26,25 +50,25 @@
         b.classList.toggle('active', on);
         b.setAttribute('aria-pressed', String(on));
       });
-      projects.forEach(function (p) {
-        p.hidden = !(f === 'all' || p.dataset.tags.split(' ').indexOf(f) !== -1);
+      items.forEach(function (it) {
+        it.hidden = !(f === 'all' || it.dataset.category.split(' ').indexOf(f) !== -1);
       });
     });
   });
 
-  // Reveal on scroll
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
+  // Contact form: GitHub Pages has no backend, so this opens the visitor's email app.
+  var form = document.getElementById('contact-form');
+  if (form) {
+    var btn = form.querySelector('.form-btn');
+    form.addEventListener('input', function () { btn.disabled = !form.checkValidity(); });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) return;
+      var d = new FormData(form);
+      var subject = 'Hello from ' + d.get('name');
+      var body = d.get('message') + '\n\n— ' + d.get('name') + ' (' + d.get('email') + ')';
+      window.location.href = 'mailto:aakritip23@iitk.ac.in?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
   }
-
-  var y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
 })();

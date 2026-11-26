@@ -11,12 +11,13 @@ edit a file, push, and the site updates in about a minute. `.nojekyll` turns off
 ## Structure
 
 ```
-index.html                  Home: hero, now, experience, projects, design work, leadership, skills, contact
+index.html                  Single page with a sidebar (photo, contacts) and four tabs:
+                            About · Resume · Portfolio · Contact (switched by JS, linkable via #about etc.)
 projects/<slug>.html        One case-study page per project (shared layout, same stylesheet)
 404.html                    Not-found page
 assets/css/style.css        All styles (tokens on :root)
-assets/js/main.js           Nav, scroll reveal, project filter
-assets/img/profile.png      Hero photo
+assets/js/main.js           Contacts toggle, tab switching, portfolio filter, mailto contact form
+assets/img/profile.png      Profile photo (cropped to a head-and-shoulders view in CSS)
 assets/img/projects/<slug>/ Cover image + screenshots per project
 assets/resume/              Downloadable resume PDF(s)
 ```
@@ -34,28 +35,21 @@ python -m http.server 8000   # then open http://localhost:8000
 - [x] Fix the missing hero photo (the HTML pointed at `assets/profile.png`, but the file was at the root)
 - [x] Add `main.js` hook, `.nojekyll` and this README
 
-### Phase 1: Content and positioning (from resume)
-- [x] Hero repositioned: Product · Growth · Analytics, with the tech stack highlighted
-- [x] "Now" strip: the latest work (LeadGen engine, Aug to Sep 2026; Medetronix internship, May to Aug 2026)
-- [x] Experience timeline: Medetronix Labs (AI/ML), Ashok Leyland (ML research), Stash AI (PM), with impact numbers
-- [x] Projects grid with filters (AI/ML · Data · Product/Strategy · Design):
-      LeadGen Outbound Engine, CauseIQ (Accenture), Customer Churn, E-Commerce SQL, Reinforce GT,
-      Weed/Crop CNN, Sharechat expansion, Cura Devices (Solve the Biz)
-- [x] Keep the design work section: Jeenius, Antaragni, Product Club, Vegan Books, CA Portal, Events, Pride, Battle Underground
-- [x] Leadership: E-Cell Manager, Product Club Secretary, TEDxIITK
-- [x] Achievements: Accenture top 4%, GDSC × Return Journey finalist, Solve the Biz gold, Ideation Insomnia gold
-- [x] Skills grouped as Product / Data / ML & GenAI / Programming
-- [x] Email, GitHub and resume download live (LinkedIn and Figma still to come)
+### Phase 1: Content and links (done)
+- [x] Content drawn from the resume, every link wired to GitHub, Figma or LinkedIn, and link-checked
 
-### Phase 2: Make every link work
-- [x] Every card links to a GitHub repo or Figma file; LinkedIn added. No placeholders left (link-checked).
-- [ ] Case-study template: problem, role, approach, outcome (numbers), stack, links, images
-- [ ] Cover images for each project in `assets/img/projects/<slug>/`
+### Phase 2: Redesign as a real portfolio (done)
+- [x] Layout inspired by a sidebar-and-tabs portfolio: sidebar with photo and contacts; About, Resume, Portfolio and Contact tabs
+- [x] All copy rewritten in the first person as short stories, with numbers only where they help
+- [x] About: story, "What I do" cards, Highlights
+- [x] Resume: Experience, Leadership and Education timelines in prose, skills, PDF download
+- [x] Portfolio: one list filtered by Product, Data, AI and Design; design work merged in
+- [x] Contact: a form that opens the visitor's email app (GitHub Pages has no backend)
 
-### Phase 3: Polish
-- [ ] Responsive check at 360, 768 and 1280 px. Mobile nav.
-- [ ] Optimise the photo (WebP plus a PNG fallback, explicit size), lazy-load images
-- [ ] SEO and sharing: title and meta, Open Graph image, favicon, `sitemap.xml`, `robots.txt`
-- [ ] Accessibility: alt text, focus states, contrast, `prefers-reduced-motion`
-- [ ] 404 page, then a link check across the whole site
-- [ ] Push, then verify the live site
+### Phase 3: Next
+- [ ] Aakriti to review the copy for voice and accuracy
+- [ ] Screenshots or cover images for projects (`assets/img/projects/<slug>/`)
+- [ ] Optional detail pages for 2 or 3 flagship projects (`projects/<slug>.html`)
+- [ ] Favicon, `sitemap.xml`, `robots.txt`, 404 page
+- [ ] Optional light-mode toggle
+- [ ] Check on a real phone, then on the live site
