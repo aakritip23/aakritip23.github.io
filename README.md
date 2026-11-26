@@ -48,7 +48,7 @@ python -m http.server 8000   # then open http://localhost:8000
 - [x] Email, GitHub and resume download live (LinkedIn and Figma still to come)
 
 ### Phase 2: Make every link work
-- [ ] Each card links to a GitHub repo, a Figma or live link, or a `projects/<slug>.html` case study. No `#` placeholders.
+- [x] Every card links to a GitHub repo or Figma file; LinkedIn added. No placeholders left (link-checked).
 - [ ] Case-study template: problem, role, approach, outcome (numbers), stack, links, images
 - [ ] Cover images for each project in `assets/img/projects/<slug>/`
 
